@@ -9,18 +9,21 @@
 /* Begin PBXBuildFile section */
 		7688DFDD184EE34300F12C1E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7688DFDC184EE34300F12C1E /* main.cpp */; };
 		7688DFDF184EE34300F12C1E /* TSP.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7688DFDE184EE34300F12C1E /* TSP.1 */; };
+		7688DFE7184EE37500F12C1E /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7688DFE5184EE37500F12C1E /* Splitter.cpp */; };
+		7688DFEA184EE7B200F12C1E /* example-input-1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7688DFE8184EE79D00F12C1E /* example-input-1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7688DFD7184EE34300F12C1E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				7688DFEA184EE7B200F12C1E /* example-input-1.txt in CopyFiles */,
 				7688DFDF184EE34300F12C1E /* TSP.1 in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -28,6 +31,9 @@
 		7688DFD9184EE34300F12C1E /* TSP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TSP; sourceTree = BUILT_PRODUCTS_DIR; };
 		7688DFDC184EE34300F12C1E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7688DFDE184EE34300F12C1E /* TSP.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TSP.1; sourceTree = "<group>"; };
+		7688DFE5184EE37500F12C1E /* Splitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Splitter.cpp; sourceTree = "<group>"; };
+		7688DFE6184EE37500F12C1E /* Splitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Splitter.h; sourceTree = "<group>"; };
+		7688DFE8184EE79D00F12C1E /* example-input-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-input-1.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +66,21 @@
 		7688DFDB184EE34300F12C1E /* TSP */ = {
 			isa = PBXGroup;
 			children = (
-				7688DFDC184EE34300F12C1E /* main.cpp */,
 				7688DFDE184EE34300F12C1E /* TSP.1 */,
+				7688DFE9184EE7A500F12C1E /* Sample Inputs */,
+				7688DFDC184EE34300F12C1E /* main.cpp */,
+				7688DFE5184EE37500F12C1E /* Splitter.cpp */,
+				7688DFE6184EE37500F12C1E /* Splitter.h */,
 			);
 			path = TSP;
+			sourceTree = "<group>";
+		};
+		7688DFE9184EE7A500F12C1E /* Sample Inputs */ = {
+			isa = PBXGroup;
+			children = (
+				7688DFE8184EE79D00F12C1E /* example-input-1.txt */,
+			);
+			name = "Sample Inputs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7688DFE7184EE37500F12C1E /* Splitter.cpp in Sources */,
 				7688DFDD184EE34300F12C1E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
