@@ -42,6 +42,7 @@ void removeCity(int cityIndex);
 int calculatePathDistance();
 void printPath();
 bool pathHasCity(int city);
+void printPathOrdered();
 
 #pragma mark - variable declarations
 vector<CityCoord> cityCoords;
@@ -52,7 +53,7 @@ int pathDistance;
 #pragma mark - function implementations
 int main(int argc, const char * argv[])
 {
-	readCitiesFile("testCoords.txt");
+	readCitiesFile("example-input-3.txt");
 
 	// calculate all the distances between two cities, and find the two nearest neighbors
 	TwoCities startingCities = calculateDistancesBetweenCities();
@@ -69,6 +70,18 @@ int main(int argc, const char * argv[])
 
 void printPath()
 {
+	list<int>::const_iterator iterator;
+	for (iterator = path.begin(); iterator != path.end(); ++iterator)
+	{
+		printf("%i\n", *iterator);
+	}
+}
+
+// to make sure all cities were used once
+void printPathOrdered()
+{
+	path.sort();
+	printf("sorted path:\n");
 	list<int>::const_iterator iterator;
 	for (iterator = path.begin(); iterator != path.end(); ++iterator)
 	{
@@ -132,11 +145,6 @@ void makePath(TwoCities startingCities)
 
 	while (path.size() < cityCoords.size())
 	{
-		if (pathHasCity(currentTwoCities.cityA) && pathHasCity(currentTwoCities.cityB))
-		{
-			printf("oops\n");
-		}
-
 		// find the closest cities to the current two cities we're looking at.
 		TwoCities citiesNearestCurrentCities = closestTwoCities(currentTwoCities.cityA, currentTwoCities.cityB);
 		int cityNearestToA = citiesNearestCurrentCities.cityA;
@@ -161,7 +169,7 @@ void makePath(TwoCities startingCities)
 	}
 }
 
-// call this when the city vertex has two edges.
+// call this when the city vertex has two edges (the city has been added to the path, and is not the first or last element)
 void removeCity(int cityIndex)
 {
 	for (int i = cityIndex+1; i < cityDistances.size(); i++)
@@ -169,7 +177,7 @@ void removeCity(int cityIndex)
 		cityDistances[i][cityIndex].used = true;
 	}
 
-	for (int i = 0; i < cityIndex-1; i++)
+	for (int i = 0; i < cityIndex; i++)
 	{
 		cityDistances[cityIndex][i].used = true;
 	}
@@ -179,9 +187,6 @@ void removeCity(int cityIndex)
 // find nearest two in case there's a common closest city for two cities.
 TwoCities closestTwoCities(int cityA, int cityB)
 {
-	int pathSize = path.size();
-
-
 	int closestCityDistA = INT_MAX;
 	int closestCityDistB = INT_MAX;
 	int closestCityToA = -1;

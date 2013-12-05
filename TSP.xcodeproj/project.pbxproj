@@ -12,6 +12,8 @@
 		7688DFE7184EE37500F12C1E /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7688DFE5184EE37500F12C1E /* Splitter.cpp */; };
 		7688DFEA184EE7B200F12C1E /* example-input-1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7688DFE8184EE79D00F12C1E /* example-input-1.txt */; };
 		7688DFEC184FBBE400F12C1E /* testCoords.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7688DFEB184FBBB300F12C1E /* testCoords.txt */; };
+		76B362821850601B00829E79 /* example-input-3.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76B362801850601600829E79 /* example-input-3.txt */; };
+		76B362831850601B00829E79 /* example-input-2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76B362811850601600829E79 /* example-input-2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -21,6 +23,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				76B362821850601B00829E79 /* example-input-3.txt in CopyFiles */,
+				76B362831850601B00829E79 /* example-input-2.txt in CopyFiles */,
 				7688DFEC184FBBE400F12C1E /* testCoords.txt in CopyFiles */,
 				7688DFEA184EE7B200F12C1E /* example-input-1.txt in CopyFiles */,
 				7688DFDF184EE34300F12C1E /* TSP.1 in CopyFiles */,
@@ -37,6 +41,8 @@
 		7688DFE6184EE37500F12C1E /* Splitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Splitter.h; sourceTree = "<group>"; };
 		7688DFE8184EE79D00F12C1E /* example-input-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-input-1.txt"; sourceTree = "<group>"; };
 		7688DFEB184FBBB300F12C1E /* testCoords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testCoords.txt; sourceTree = "<group>"; };
+		76B362801850601600829E79 /* example-input-3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-input-3.txt"; sourceTree = "<group>"; };
+		76B362811850601600829E79 /* example-input-2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-input-2.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				7688DFE8184EE79D00F12C1E /* example-input-1.txt */,
+				76B362811850601600829E79 /* example-input-2.txt */,
+				76B362801850601600829E79 /* example-input-3.txt */,
 				7688DFEB184FBBB300F12C1E /* testCoords.txt */,
 			);
 			name = "Sample Inputs";
@@ -247,6 +255,7 @@
 				7688DFE4184EE34300F12C1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
