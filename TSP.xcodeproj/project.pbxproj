@@ -11,6 +11,7 @@
 		7688DFDF184EE34300F12C1E /* TSP.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7688DFDE184EE34300F12C1E /* TSP.1 */; };
 		7688DFE7184EE37500F12C1E /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7688DFE5184EE37500F12C1E /* Splitter.cpp */; };
 		7688DFEA184EE7B200F12C1E /* example-input-1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7688DFE8184EE79D00F12C1E /* example-input-1.txt */; };
+		7688DFEC184FBBE400F12C1E /* testCoords.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7688DFEB184FBBB300F12C1E /* testCoords.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,6 +21,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				7688DFEC184FBBE400F12C1E /* testCoords.txt in CopyFiles */,
 				7688DFEA184EE7B200F12C1E /* example-input-1.txt in CopyFiles */,
 				7688DFDF184EE34300F12C1E /* TSP.1 in CopyFiles */,
 			);
@@ -34,6 +36,7 @@
 		7688DFE5184EE37500F12C1E /* Splitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Splitter.cpp; sourceTree = "<group>"; };
 		7688DFE6184EE37500F12C1E /* Splitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Splitter.h; sourceTree = "<group>"; };
 		7688DFE8184EE79D00F12C1E /* example-input-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-input-1.txt"; sourceTree = "<group>"; };
+		7688DFEB184FBBB300F12C1E /* testCoords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testCoords.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				7688DFE8184EE79D00F12C1E /* example-input-1.txt */,
+				7688DFEB184FBBB300F12C1E /* testCoords.txt */,
 			);
 			name = "Sample Inputs";
 			sourceTree = "<group>";
