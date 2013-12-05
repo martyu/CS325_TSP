@@ -52,7 +52,7 @@ int pathDistance;
 #pragma mark - function implementations
 int main(int argc, const char * argv[])
 {
-	readCitiesFile("example-input-1.txt");
+	readCitiesFile("testCoords.txt");
 
 	// calculate all the distances between two cities, and find the two nearest neighbors
 	TwoCities startingCities = calculateDistancesBetweenCities();
@@ -184,8 +184,8 @@ TwoCities closestTwoCities(int cityA, int cityB)
 
 	int closestCityDistA = INT_MAX;
 	int closestCityDistB = INT_MAX;
-	int closestCityIndexA = INT_MAX;
-	int closestCityIndexB = INT_MAX;
+	int closestCityToA = -1;
+	int closestCityToB = -1;
 
 /**** find closest city to city A *****/
 	for (int cityANext = cityA+1; cityANext < cityDistances.size(); cityANext++)
@@ -193,7 +193,7 @@ TwoCities closestTwoCities(int cityA, int cityB)
 		int distBetweenAB = distanceBetweenCities(cityA, cityANext, false);
 		if (distBetweenAB < closestCityDistA)
 		{
-			closestCityIndexA = cityANext;
+			closestCityToA = cityANext;
 			closestCityDistA = distBetweenAB;
 		}
 	}
@@ -203,7 +203,7 @@ TwoCities closestTwoCities(int cityA, int cityB)
 		int distBetweenAB = distanceBetweenCities(cityA, cityANext, false);
 		if (distBetweenAB < closestCityDistA)
 		{
-			closestCityIndexA = cityANext;
+			closestCityToA = cityANext;
 			closestCityDistA = distBetweenAB;
 		}
 	}
@@ -218,12 +218,12 @@ TwoCities closestTwoCities(int cityA, int cityB)
 	for (int cityBNext = cityB+1; cityBNext < cityDistances.size(); cityBNext++)
 	{
 		// don't add the same city as was added for city A (above)
-		if (cityBNext != closestCityIndexA)
+		if (cityBNext != closestCityToA)
 		{
 			int distBetweenAB = distanceBetweenCities(cityB, cityBNext, false);
 			if (distBetweenAB < closestCityDistB)
 			{
-				closestCityIndexB = cityBNext;
+				closestCityToB = cityBNext;
 				closestCityDistB = distBetweenAB;
 			}
 		}
@@ -232,12 +232,12 @@ TwoCities closestTwoCities(int cityA, int cityB)
 	for (int cityBNext = 0; cityBNext < cityB-1; cityBNext++)
 	{
 		// don't add the same city as was added for city A (above)
-		if (cityBNext != closestCityIndexA)
+		if (cityBNext != closestCityToA)
 		{
 			int distBetweenAB = distanceBetweenCities(cityB, cityBNext, false);
 			if (distBetweenAB < closestCityDistB)
 			{
-				closestCityIndexB = cityBNext;
+				closestCityToB = cityBNext;
 				closestCityDistB = distBetweenAB;
 			}
 		}
@@ -245,8 +245,8 @@ TwoCities closestTwoCities(int cityA, int cityB)
 /*******/
 
 	TwoCities closestCities;
-	closestCities.cityA = closestCityIndexA;
-	closestCities.cityB = closestCityIndexB;
+	closestCities.cityA = closestCityToA;
+	closestCities.cityB = closestCityToB;
 
 	return closestCities;
 }
