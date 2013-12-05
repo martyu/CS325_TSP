@@ -41,8 +41,8 @@ int distanceBetweenCities(int cityIndexA, int cityIndexB, bool forceOriginal);
 void removeCity(int cityIndex);
 int calculatePathDistance();
 void printPath();
-bool pathHasCity(int city);
 void printPathOrdered();
+void writeResultsToFile();
 
 #pragma mark - variable declarations
 vector<CityCoord> cityCoords;
@@ -53,7 +53,7 @@ int pathDistance;
 #pragma mark - function implementations
 int main(int argc, const char * argv[])
 {
-	readCitiesFile("example-input-3.txt");
+	readCitiesFile("example-input-1.txt");
 
 	// calculate all the distances between two cities, and find the two nearest neighbors
 	TwoCities startingCities = calculateDistancesBetweenCities();
@@ -61,11 +61,25 @@ int main(int argc, const char * argv[])
 	// make the path
 	makePath(startingCities);
 
-	printPath();
-
-	printf("distance: %i\n", calculatePathDistance());
+	writeResultsToFile();
 
     return 0;
+}
+
+void writeResultsToFile()
+{
+	ofstream myfile;
+	myfile.open("path.txt");
+
+	myfile << calculatePathDistance();
+
+	list<int>::const_iterator iterator;
+	for (iterator = path.begin(); iterator != path.end(); ++iterator)
+	{
+		myfile << *iterator << "\n";
+	}
+
+	myfile.close();
 }
 
 void printPath()
@@ -80,27 +94,14 @@ void printPath()
 // to make sure all cities were used once
 void printPathOrdered()
 {
-	path.sort();
+	list<int> pathCopy = path;
+	pathCopy.sort();
 	printf("sorted path:\n");
 	list<int>::const_iterator iterator;
 	for (iterator = path.begin(); iterator != path.end(); ++iterator)
 	{
 		printf("%i\n", *iterator);
 	}
-}
-
-bool pathHasCity(int city)
-{
-	bool hasCity = false;
-
-	list<int>::const_iterator iterator;
-	for (iterator = path.begin(); iterator != path.end(); ++iterator)
-	{
-		if (*iterator == city)
-			hasCity = true;
-	}
-
-	return hasCity;
 }
 
 int calculatePathDistance()
