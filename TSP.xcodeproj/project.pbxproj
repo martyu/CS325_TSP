@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76880F7118517272002E2BA0 /* test-input-1.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76880F701851726C002E2BA0 /* test-input-1.txt */; };
+		76880F7418518278002E2BA0 /* test-input-3.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76880F7218518272002E2BA0 /* test-input-3.txt */; };
+		76880F7518518278002E2BA0 /* test-input-2.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 76880F7318518272002E2BA0 /* test-input-2.txt */; };
 		7688DFDD184EE34300F12C1E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7688DFDC184EE34300F12C1E /* main.cpp */; };
 		7688DFDF184EE34300F12C1E /* TSP.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7688DFDE184EE34300F12C1E /* TSP.1 */; };
 		7688DFE7184EE37500F12C1E /* Splitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7688DFE5184EE37500F12C1E /* Splitter.cpp */; };
@@ -23,6 +26,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				76880F7418518278002E2BA0 /* test-input-3.txt in CopyFiles */,
+				76880F7518518278002E2BA0 /* test-input-2.txt in CopyFiles */,
+				76880F7118517272002E2BA0 /* test-input-1.txt in CopyFiles */,
 				76B362821850601B00829E79 /* example-input-3.txt in CopyFiles */,
 				76B362831850601B00829E79 /* example-input-2.txt in CopyFiles */,
 				7688DFEC184FBBE400F12C1E /* testCoords.txt in CopyFiles */,
@@ -34,6 +40,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		76880F701851726C002E2BA0 /* test-input-1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-input-1.txt"; sourceTree = "<group>"; };
+		76880F7218518272002E2BA0 /* test-input-3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-input-3.txt"; sourceTree = "<group>"; };
+		76880F7318518272002E2BA0 /* test-input-2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "test-input-2.txt"; sourceTree = "<group>"; };
 		7688DFD9184EE34300F12C1E /* TSP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TSP; sourceTree = BUILT_PRODUCTS_DIR; };
 		7688DFDC184EE34300F12C1E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7688DFDE184EE34300F12C1E /* TSP.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TSP.1; sourceTree = "<group>"; };
@@ -87,6 +96,9 @@
 		7688DFE9184EE7A500F12C1E /* Sample Inputs */ = {
 			isa = PBXGroup;
 			children = (
+				76880F701851726C002E2BA0 /* test-input-1.txt */,
+				76880F7318518272002E2BA0 /* test-input-2.txt */,
+				76880F7218518272002E2BA0 /* test-input-3.txt */,
 				7688DFE8184EE79D00F12C1E /* example-input-1.txt */,
 				76B362811850601600829E79 /* example-input-2.txt */,
 				76B362801850601600829E79 /* example-input-3.txt */,

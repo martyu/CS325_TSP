@@ -53,7 +53,7 @@ int pathDistance;
 #pragma mark - function implementations
 int main(int argc, const char * argv[])
 {
-	readCitiesFile("example-input-1.txt");
+	readCitiesFile("test-input-3.txt");
 
 	// calculate all the distances between two cities, and find the two nearest neighbors
 	TwoCities startingCities = calculateDistancesBetweenCities();
@@ -69,7 +69,7 @@ int main(int argc, const char * argv[])
 void writeResultsToFile()
 {
 	ofstream myfile;
-	myfile.open("path.txt");
+	myfile.open("path-3.txt");
 
 	myfile << calculatePathDistance();
 
@@ -305,7 +305,7 @@ void readCitiesFile(string fileName)
 		getline(fileStream, line);
 		while (line.length() > 1)
 		{
-			Splitter split(line, " ");
+			Splitter split(line, "    ");
 			CityCoord coords;
 			float num1 = stoi(split[1]);
 			float num2 = stoi(split[2]);
